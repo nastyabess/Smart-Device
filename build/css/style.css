@@ -397,7 +397,7 @@ template {
   font-weight: 500;
   font-family: "Roboto";
   font-display: swap;
-  src: url("../../fonts/Roboto-Medium.woff2") format("woff2");
+  src: url("../../fonts/roboto-medium.woff2") format("woff2");
 }
 
 @font-face {
@@ -405,7 +405,7 @@ template {
   font-weight: 400;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("../../fonts/RobotoCondensed-Regular.woff2") format("woff2");
+  src: url("../../fonts/roboto-condensed-regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -413,7 +413,7 @@ template {
   font-weight: 700;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("../../fonts/RobotoCondensed-Bold.woff2") format("woff2");
+  src: url("../../fonts/roboto-condensed-bold.woff2") format("woff2");
 }
 
 *,
@@ -1297,6 +1297,111 @@ button,
   color: #15ab07;
 }
 
+.main-header {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, rgb(4, 24, 39)), to(rgba(4, 24, 39, 0)));
+  background: -o-linear-gradient(top, rgb(4, 24, 39) 84.9%, rgba(4, 24, 39, 0) 100%);
+  background: linear-gradient(180deg, rgb(4, 24, 39) 84.9%, rgba(4, 24, 39, 0) 100%);
+}
+
+.main-header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  max-width: 1222px;
+}
+
+.main-header__logo img {
+  width: 215px;
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.main-nav__modal-button {
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #f2f5f6;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 10px 15px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #f2f5f7;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.main-nav__modal-button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.main-nav__modal-button.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 480px;
+  margin-right: 145px;
+}
+
+.contacts__link {
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "PT Mono", "Monaco", monospace;
+  font-style: normal;
+  color: #f2f5f6;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 225px;
+}
+
+.contacts__link:not(:last-child) {
+  margin-right: 30px;
+}
+
+.contacts__icon {
+  margin-right: 15px;
+}
+
+.feedback {
+  width: 500px;
+  height: 610px;
+  background-color: #00b3ff;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1344,9 +1449,47 @@ button,
   }
 }
 
+@media (max-width: 1024px) {
+  .main-header__wrapper {
+    padding-top: 20px;
+    padding-bottom: 25px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .contacts__link {
+    padding: 10px 10px;
+    margin-right: 20px;
+  }
+
+  .contacts__icon {
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 1023px) {
   .container {
     padding: 0 24px;
+  }
+
+  .main-nav__modal-button {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header__wrapper {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .main-header__logo img {
+    width: 35px;
+  }
+
+  .contacts p {
+    display: none;
   }
 }
 
@@ -1443,5 +1586,9 @@ button,
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .main-nav__modal-button:hover:not(.focus-visible) {
+    opacity: 0.8;
   }
 }

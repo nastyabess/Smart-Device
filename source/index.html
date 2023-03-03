@@ -5,17 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
-    <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font">
-    <link href="fonts/RobotoCondensed-Bold.woff2" as="font">
-    <link href="fonts/Roboto-Medium.woff2" as="font">
-    <link href="fonts/pt-mono_regular.woff2" as="font">
+    <title>Smart Device</title>
+    <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font">
+    <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font">
+    <link rel="preload" href="fonts/roboto-medium.woff2" as="font">
+    <link rel="preload" href="fonts/pt-mono_regular.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="main-header">
+        <div class="container">
+          <div class="main-header__wrapper">
+            <a class="main-header__logo" href="#">
+              <picture>
+                <source media="(min-width: 769px)" srcset="img/svg/logo.svg">
+                <img src="img/svg/logo-header-mobile.svg" alt="Логотип Smart Device">
+              </picture>
+            </a>
+            <nav class="main-nav">
+              <div class="contacts">
+                <a class="contacts__link contacts-link-email" href="mailto:info@sd.ru">
+                  <svg class="contacts__icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#email-icon"></use>
+                  </svg>
+                  <p>info@sd.ru</p>
+                </a>
+                <a class="contacts__link contacts__link-phone" href="tel:+74950005252">
+                  <svg class="contacts__icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#phone-icon"></use>
+                  </svg>
+                  <p>+7 (495) 000 52 52</p>
+                </a>
+              </div>
+              <a class="main-nav__modal-button" href="#" data-open-modal="feedback">Заказать звонок</a>
+            </nav>
+          </div>
+        </div>
       </header>
       <main>
 
@@ -29,13 +55,42 @@
     <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
+        <div class="modal__content feedback">
+          <h2>Закажите звонок</h2>
+          <p class="modal__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
+            <svg width="20" height="20">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>
           </button>
+          <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset>
+              <legend class="visually-hidden">Контактные данные</legend>
+                <ul>
+                  <li>
+                    <label>
+                      <input type="text" name="user-name" placeholder="Имя" required>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="tel" name="user-phone" placeholder="Телефон">
+                    </label>
+                  </li>
+                  <li>
+                    <textarea rows="5" cols="37" name="text" placeholder="Ваш вопрос"></textarea>
+                  </li>
+                </ul>
+            </fieldset>
+            <button type="submit">Отправить</button>
+            <fieldset>
+              <label>
+                <input type="checkbox" name="" value="">
+                <span class="control__mark-checkbox"></span>
+                <span class="control__label">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+              </label>
+            </fieldset>
+          </form>
         </div>
       </div>
     </div>
