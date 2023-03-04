@@ -1,0 +1,40 @@
+.contacts-footer__address {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-footer__address p {
+  font-family: "PT Mono", "Monaco", monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  color: $color-white-footer;
+  margin: 0;
+  margin-bottom: 10px;
+
+  @include vp-767 {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.contacts-footer__phone {
+  font-family: "PT Mono", "Monaco", monospace;
+  font-size: 16px;
+  line-height: 25px;
+  font-style: normal;
+  color: $color-white-footer;
+  text-align: left;
+  text-decoration: none;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}

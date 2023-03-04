@@ -1,0 +1,114 @@
+.footer {
+  padding-top: 50px;
+  padding-bottom: 55px;
+  background-color: $color-black-pearl;
+
+  @include vp-1023 {
+    padding-bottom: 65px
+  }
+
+  @include vp-767 {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
+
+.footer__container {
+  max-width: 1220px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  @include vp-1023 {
+    max-width: 670px;
+    flex-direction: column;
+  }
+
+  @include vp-767 {
+    min-width: 270px;
+  }
+}
+
+.footer__logo {
+  margin-bottom: 30px;
+
+  @include vp-1023 {
+    margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    margin-bottom: 10px;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 69%;
+
+  @include vp-1023 {
+    width: 100%;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.footer__menu h2 {
+  font-size: 15px;
+  line-height: 16px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: $color-default-white;
+  text-align: left;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  @include vp-767 {
+    margin-bottom: 15px;
+  }
+}
+
+.footer__menu-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(4, auto);
+  column-gap: 30px;
+
+  @include vp-1023 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.footer__menu-item {
+  width: 220px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.footer__menu-item a {
+  display: block;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "PT Mono", "Monaco", monospace;
+  font-weight: 400;
+  color: $color-white-footer;
+  text-align: left;
+
+}

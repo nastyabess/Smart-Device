@@ -1,31 +1,49 @@
 .main-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
   background: $black-to-down-nav;
+
+  @include vp-1023 {
+    position: static;
+  }
+
 }
 
 .main-header__wrapper {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  padding-top: 30px;
-  padding-bottom: 35px;
+  padding-top: 29px;
+  padding-bottom: 36px;
   max-width: 1222px;
 
-  @media (max-width: $vp-1024) {
+  @include vp-1023 {
+    max-width: 670px;
     padding-top: 20px;
     padding-bottom: 25px;
     justify-content: space-between;
   }
 
-  @media (max-width: $vp-768) {
+  @include vp-767 {
+    min-width: 270px;
     padding-top: 10px;
     padding-bottom: 20px;
+  }
+}
+
+.main-header__logo {
+  @include vp-767 {
+    padding-top: 5px;
+    padding-left: 10px;
   }
 }
 
 .main-header__logo img {
   width: 215px;
 
-  @media (max-width: $vp-768) {
+  @include vp-767 {
     width: 35px;
   }
 }

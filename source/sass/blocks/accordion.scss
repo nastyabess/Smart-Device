@@ -1,0 +1,18 @@
+.accordion {
+  max-width: 767px;
+  margin: 0;
+
+  & & {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__element.is-active > &__button {
+    opacity: 0.5;
+  }
+
+  &__button {
+    width: 100%;
+    cursor: pointer;
+  }
+}
