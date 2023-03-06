@@ -560,7 +560,6 @@ button,
 }
 
 .wrapper {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1520,40 +1519,44 @@ button,
 
 .promo {
   padding-top: 185px;
+  padding-bottom: 280px;
 }
 
 .promo__wrapper {
-  max-width: 1220px;
+  width: 60%;
   margin: 0 auto;
   text-align: left;
-  padding-left: 125px;
+  padding-left: 70px;
 }
 
 .promo__image {
-  background-color: #041827;
-  max-width: 1990px;
-  -o-object-fit: contain;
-  object-fit: contain;
-}
-
-.promo__image::after {
-  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   top: 0;
-  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  min-height: 880px;
+}
+
+.promo__image::before {
+  position: absolute;
+  content: "";
   width: 100%;
   height: 100%;
+  top: 0;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0)));
   background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
   background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
-  z-index: -1;
 }
 
 .promo__image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  background-color: #041827;
 }
 
 .promo h2 {
@@ -1569,6 +1572,7 @@ button,
 }
 
 .promo p {
+  max-width: 680px;
   font-family: "PT Mono", "Monaco", monospace;
   font-weight: 400;
   font-size: 22px;
@@ -1586,11 +1590,16 @@ button,
   line-height: 21px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  text-align: center;
   padding: 16px 25px;
   color: #f2f5f6;
   background-color: #00b2ff;
   border-radius: 3px;
   max-width: 410px;
+}
+
+.promo__button--abbreviated-text {
+  display: none;
 }
 
 .footer {
@@ -1756,6 +1765,80 @@ button,
   overflow: hidden;
 }
 
+.features {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.features__wrapper {
+  max-width: 1222px;
+  margin: 0 auto;
+}
+
+.features__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 30px;
+}
+
+.features__item h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #00b2ff;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.features__item p {
+  font-family: "PT Mono", "Monaco", monospace;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #041827;
+  margin: 0;
+}
+
+.features__icon {
+  fill: #00b2ff;
+  margin-bottom: 20px;
+}
+
+.features__icon--mobile {
+  display: none;
+}
+
+.features__item {
+  min-height: 300px;
+  text-align: left;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 40px;
+  padding-bottom: 35px;
+  border: 1px solid #EBEBEB;
+  border-left: 5px solid #00b2ff;
+}
+
+.features__item--active {
+  background-color: #00b2ff;
+}
+
+.features__item--active h2,
+.features__item--active p {
+  color: #f2f5f6;
+}
+
+.features__item--active svg {
+  fill: #f2f5f7;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1806,8 +1889,17 @@ button,
     margin-right: 60px;
   }
 
+  .promo__wrapper {
+    width: 80%;
+  }
+
   .footer__container {
     padding: 0 32px;
+  }
+
+  .features {
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 }
 
@@ -1821,7 +1913,8 @@ button,
   }
 
   .main-header__wrapper {
-    max-width: 670px;
+    padding-left: 26px;
+    padding-right: 26px;
     padding-top: 20px;
     padding-bottom: 25px;
     -webkit-box-pack: justify;
@@ -1854,6 +1947,36 @@ button,
 
   .contacts__icon {
     margin-right: 0;
+  }
+
+  .promo {
+    padding-top: 80px;
+    padding-bottom: 196px;
+  }
+
+  .promo__wrapper {
+    width: 100%;
+    margin: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .promo__image {
+    min-height: 640px;
+  }
+
+  .promo h2 {
+    font-size: 64px;
+    line-height: 75px;
+    margin-bottom: 20px;
+  }
+
+  .promo p {
+    margin-bottom: 50px;
+  }
+
+  .promo__button {
+    margin-left: 45px;
   }
 
   .footer {
@@ -1900,6 +2023,22 @@ button,
     justify-content: space-between;
     margin-bottom: 35px;
   }
+
+  .features {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .features__item h2 {
+    margin-bottom: 8px;
+  }
+
+  .features__item {
+    min-height: 360px;
+    padding: 40px 30px 35px 40px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1922,6 +2061,8 @@ button,
 
   .main-header__wrapper {
     min-width: 270px;
+    padding-left: 0;
+    padding-right: 0;
     padding-top: 10px;
     padding-bottom: 20px;
   }
@@ -1935,12 +2076,51 @@ button,
     width: 35px;
   }
 
+  .promo__wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .promo__image {
+    min-height: 560px;
+  }
+
+  .promo h2 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .promo p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .promo__button {
+    margin-left: 0;
+  }
+
+  .promo__button {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 10px 30px;
+  }
+
+  .promo__button--abbreviated-text {
+    display: block;
+  }
+
+  .promo__button--full-text {
+    display: none;
+  }
+
   .footer {
     padding-top: 35px;
     padding-bottom: 35px;
   }
 
   .footer__container {
+    padding-left: 0;
+    padding-right: 0;
     min-width: 270px;
   }
 
@@ -2063,6 +2243,39 @@ button,
   .accordion__content {
     padding-left: 25px;
     padding-right: 25px;
+  }
+
+  .features {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .features__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .features__item h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .features__item p {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .features__icon--mobile {
+    display: block;
+  }
+
+  .features__icon--desktop {
+    display: none;
+  }
+
+  .features__item {
+    min-height: 340px;
+    padding: 30px 30px 35px;
   }
 }
 

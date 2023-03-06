@@ -20,7 +20,8 @@
   max-width: 1222px;
 
   @include vp-1023 {
-    max-width: 670px;
+    padding-left: 26px;
+    padding-right: 26px;
     padding-top: 20px;
     padding-bottom: 25px;
     justify-content: space-between;
@@ -28,6 +29,8 @@
 
   @include vp-767 {
     min-width: 270px;
+    padding-left: 0;
+    padding-right: 0;
     padding-top: 10px;
     padding-bottom: 20px;
   }
