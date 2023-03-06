@@ -1624,7 +1624,8 @@ button,
   width: 69%;
 }
 
-.footer__menu h2 {
+.footer__menu-title {
+  position: relative;
   font-size: 15px;
   line-height: 16px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -1636,6 +1637,8 @@ button,
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
+  background-color: #041827;
+  border: none;
 }
 
 .footer__menu-list {
@@ -1735,25 +1738,6 @@ button,
   margin-bottom: 10px;
 }
 
-.accordion {
-  max-width: 767px;
-  margin: 0;
-}
-
-.accordion .accordion {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.accordion__element.is-active > .accordion__button {
-  opacity: 0.5;
-}
-
-.accordion__button {
-  width: 100%;
-  cursor: pointer;
-}
-
 [data-accordion=element].is-active > [data-accordion=content] {
   max-height: 100%;
 }
@@ -1821,6 +1805,10 @@ button,
   .contacts__link:not(:last-child) {
     margin-right: 60px;
   }
+
+  .footer__container {
+    padding: 0 32px;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -1873,7 +1861,8 @@ button,
   }
 
   .footer__container {
-    max-width: 670px;
+    padding-left: 50px;
+    padding-right: 45px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1964,13 +1953,29 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    min-width: 270px;
   }
 
-  .footer__menu h2 {
-    margin-bottom: 15px;
+  .footer__menu {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .footer__menu::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(248, 253, 255, 0.7);
+    bottom: 0;
+    left: 0;
+  }
+
+  .footer__menu-title {
+    margin-bottom: 0;
+    padding-left: 25px;
+    padding-right: 26px;
   }
 
   .footer__menu-item {
@@ -1978,6 +1983,7 @@ button,
   }
 
   .social {
+    position: relative;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1988,6 +1994,16 @@ button,
     margin-bottom: 0;
   }
 
+  .social::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(248, 253, 255, 0.7);
+    bottom: 0;
+    left: 0;
+  }
+
   .contacts-footer__address p {
     margin-bottom: 15px;
     font-size: 14px;
@@ -1996,6 +2012,57 @@ button,
 
   .contacts-footer__phone {
     font-size: 14px;
+  }
+
+  .accordion {
+    max-width: 767px;
+    margin: 0;
+  }
+
+  .accordion .accordion {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .accordion__button {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .accordion__button::before,
+  .accordion__button::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 50%;
+    right: 26px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #f8fdff;
+    width: 15px;
+    height: 1px;
+  }
+
+  .accordion__button::after {
+    -webkit-transform: translate(-50%, -50%) rotate(90deg);
+    -ms-transform: translate(-50%, -50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  .accordion__element.is-active > .accordion__button::after {
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+    -ms-transform: translate(-50%, -50%) rotate(180deg);
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  .accordion__wrapper {
+    margin-top: 15px;
+  }
+
+  .accordion__content {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 

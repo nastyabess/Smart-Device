@@ -7,6 +7,7 @@ import {initAccordions} from './modules/accordion/init-accordion';
 
 window.addEventListener('DOMContentLoaded', () => {
 
+
   initAccordions();
   // Utils
   // ---------------------------------

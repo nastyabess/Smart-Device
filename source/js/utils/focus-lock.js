@@ -70,7 +70,7 @@ export class FocusLock {
     document.addEventListener('keydown', this._documentKeydownHandler);
   }
 
-  unlock(returnFocus = true) {
+  unlock(returnFocus = false) {
     if (this._endElement && returnFocus) {
       this._endElement.focus();
     }
