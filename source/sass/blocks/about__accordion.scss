@@ -1,0 +1,55 @@
+.about__accordion {
+  padding-left: 249px;
+
+  @include vp-1023 {
+    padding-left: 179px;
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+  }
+}
+
+
+
+
+.about__accordion-content {
+  min-height: 230px;
+  margin-bottom: 25px;
+
+  @include vp-1023 {
+    min-height: 315px;
+    margin-bottom: 22px;
+  }
+
+  @include vp-767 {
+    min-height: 267px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.about__accordion-button {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $color-deep-sky-blue;
+  padding: 14px 22px;
+  background-color: $color-transparent;
+  border: 1px solid $color-deep-sky-blue;
+  border-radius: 3px;
+
+  @include vp-767 {
+    width: 160px;
+    padding: 9px 22px;
+  }
+}
+
+
+.about__accordion-button-text--open {
+  display: none;
+}

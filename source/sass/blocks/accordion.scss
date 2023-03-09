@@ -10,42 +10,46 @@
     }
 
     &__button {
-      width: 100%;
+
       cursor: pointer;
 
-      &::before,
-      &::after {
-        position: absolute;
-        content: '';
-        display: block;
-        top: 50%;
-        right: 26px;
-        transform: translate(-50%, -50%);
-        background-color: $color-alice-blue-social;
-        width: 15px;
-        height: 1px;
-      }
 
-      &::after {
-        transform: translate(-50%, -50%) rotate(90deg);
-      }
     }
 
-    &__element.is-active>&__button::after {
-      transform: translate(-50%, -50%) rotate(180deg);
+    .accordion__wrapper {
+      @include vp-767 {
+        margin-top: 15px;
+      }
     }
   }
 }
 
-.accordion__wrapper {
-  @include vp-767 {
-    margin-top: 15px;
-  }
-}
-
-.accordion__content {
+.accordion__content--footer {
   @include vp-767 {
     padding-left: 25px;
     padding-right: 25px;
+  }
+}
+
+.accordion__button-footer {
+  width: 100%;
+
+  @include vp-767 {
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 50%;
+      right: 26px;
+      transform: translate(-50%, -50%);
+      background-color: $color-alice-blue-primary;
+      width: 15px;
+      height: 1px;
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
   }
 }

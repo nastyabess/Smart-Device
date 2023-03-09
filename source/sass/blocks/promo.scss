@@ -4,7 +4,11 @@
 
   @include vp-1023 {
     padding-top: 80px;
-    padding-bottom: 196px;
+    padding-bottom: 206px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 190px;
   }
 }
 
@@ -12,7 +16,7 @@
   width: 60%;
   margin: 0 auto;
   text-align: left;
-  padding-left: 70px;
+  padding-left: 91px;
 
   @include vp-1439 {
     width: 80%;
@@ -67,10 +71,14 @@
   height: auto;
   background-color: $color-black-pearl;
 
+  @include vp-1023 {
+    object-position: left -127px top 0;
+  }
 
-
+  @include vp-767 {
+    object-position: left -233px top 11px;
+  }
 }
-
 
 .promo h2 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -86,12 +94,13 @@
   @include vp-1023 {
     font-size: 64px;
     line-height: 75px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
   @include vp-767 {
     font-size: 36px;
     line-height: 42px;
+    margin-bottom: 8px;
   }
 }
 
@@ -106,12 +115,13 @@
   margin-bottom: 47px;
 
   @include vp-1023 {
-    margin-bottom: 50px;
+    margin-bottom: 58px;
   }
 
   @include vp-767 {
     font-size: 14px;
     line-height: 22px;
+    margin-bottom: 44px;
   }
 
 }
@@ -136,23 +146,24 @@
   }
 
   @include vp-767 {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 12px 30px;
     margin-left: 0;
   }
+}
 
-  &--abbreviated-text {
+.promo__button-text {
+  &--abbreviated {
     display: none;
   }
 
   @include vp-767 {
-    font-size: 14px;
-    line-height: 16px;
-    padding: 10px 30px;
-
-    &--abbreviated-text {
+    &--abbreviated {
       display: block;
     }
 
-    &--full-text {
+    &--full {
       display: none;
     }
   }
