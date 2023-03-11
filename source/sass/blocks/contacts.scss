@@ -1,8 +1,13 @@
 .contacts {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+
+
+  @include vp-1023 {
+    align-self: flex-start;
+    gap: 20px;
+  }
 }
 
 .contacts p {
@@ -14,6 +19,7 @@
 }
 
 .contacts__link {
+  min-width: 225px;
   font-size: 16px;
   line-height: 18px;
   font-family: "PT Mono", "Monaco", monospace;
@@ -23,21 +29,18 @@
   align-items: center;
   padding: 10px 0;
 
-  &:not(:last-child){
-    margin-right: 118px;
-
-    @include vp-1439 {
-      margin-right: 60px;
-    }
-
-    @include vp-1023 {
-      margin-right: 20px;
-    }
-  }
-
   @include vp-1023 {
+    min-width: auto;
     padding: 10px 10px;
 
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  @include active {
+    opacity: 0.6;
   }
 }
 

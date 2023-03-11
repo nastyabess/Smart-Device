@@ -2,11 +2,11 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initAccordions} from './modules/accordion/init-accordion';
+import {onButtonClick} from './modules/accordion/accordion-button';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-
 
   initAccordions();
   // Utils
@@ -16,6 +16,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+
+  onButtonClick();
+
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

@@ -1,0 +1,279 @@
+.catalog {
+  background-color: $color-black-pearl;
+  padding-top: 68px;
+  padding-bottom: 140px;
+
+  @include vp-1023 {
+    padding-top: 56px;
+    padding-bottom: 75px;
+  }
+
+  @include vp-767 {
+    padding-top: 47px;
+    padding-bottom: 87px;
+  }
+}
+
+.catalog__wrapper {
+  max-width: 1220px;
+  margin: 0 auto;
+
+  @include vp-1023 {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+
+  @include vp-767 {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+}
+
+.catalog__container {
+  max-width: 1220px;
+  margin: 0 auto;
+  margin-bottom: 51px;
+
+  @include vp-1023 {
+    margin-bottom: 37px;
+    padding: 0 26px;
+  }
+
+  @include vp-767 {
+    padding-left: 9px;
+    padding-right: 20px;
+    margin-bottom: 28px;
+  }
+}
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 85px;
+
+  @include vp-1439 {
+    gap: 50px 30px;
+  }
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0;
+    row-gap: 30px;
+  }
+}
+
+.catalog__title {
+  &--mobile {
+    display: none;
+  }
+
+  @include vp-767 {
+    &--mobile {
+      display: block;
+    }
+
+    &--desktop {
+      display: none;
+    }
+  }
+}
+
+.catalog p {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  text-align: left;
+  color: $color-default-white;
+  margin: 0;
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.catalog__item p {
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0;
+
+  @include vp-1023 {
+    max-width: 150px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 30px;
+
+  }
+}
+
+.catalog__item {
+  position: relative;
+  z-index: 1;
+  min-width: 350px;
+  min-height: 650px;
+  outline: 2px solid $color-transparent;
+  outline-offset: -2px;
+
+  @include vp-1439 {
+    min-width: 300px;
+    min-height: 650px;
+  }
+
+  @include vp-1023 {
+    min-width: 670px;
+    min-height: 250px;
+  }
+
+  @include vp-767 {
+    min-width: 270px;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  &:focus-within {
+    outline: 2px solid $color-alice-blue;
+  }
+}
+
+.catalog__card {
+  display: block;
+  margin: 0;
+  padding-top: 50px;
+  padding-left: 40px;
+  padding-right: 118px;
+  padding-bottom: 20px;
+  outline: none;
+
+  @include vp-1023 {
+    padding-top: 40px;
+    padding-left: 45px;
+  }
+
+  @include vp-767 {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 105px;
+  }
+}
+
+
+.catalog__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  height: 650px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: $color-black-pearl-mask;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+  }
+
+  @include vp-1023 {
+    min-width: 670px;
+    height: 250px;
+  }
+
+  @include vp-767 {
+    min-width: 270px;
+  }
+}
+
+.catalog__image img {
+  object-fit: cover;
+  height: 100%;
+  background-color: $color-black-pearl;
+
+  @include vp-1023 {
+    scale: 2.2;
+  }
+
+  @include vp-767 {
+    scale: 2.7;
+  }
+}
+
+.catalog__image-1 img {
+  object-position: left -170px top 0;
+
+  @include vp-1023 {
+    object-position: left 76px bottom 68px;
+  }
+
+  @include vp-767 {
+    object-position: left -55px bottom 6px;
+  }
+}
+
+.catalog__image-2 img {
+  object-position: left -488px top 0;
+
+  @include vp-1023 {
+    object-position: right 100px bottom -15px;
+  }
+
+  @include vp-767 {
+    object-position: left -54px bottom 79px;
+  }
+}
+
+.catalog__image-3 img {
+  object-position: left -842px top 0;
+
+  @include vp-1023 {
+    object-position: left 122px top -61px;
+  }
+
+  @include vp-767 {
+    object-position: right -38px bottom 43px;
+  }
+}
+
+.catalog__button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background-color: $color-deep-sky-blue;
+  border-color: $color-transparent;
+  border-radius: 3px 0px 0px 0px;
+  cursor: pointer;
+
+  @include vp-767 {
+    width: 40px;
+    height: 40px;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  @include active {
+    opacity: 0.6;
+  }
+}
+
+.catalog__button svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+}
+

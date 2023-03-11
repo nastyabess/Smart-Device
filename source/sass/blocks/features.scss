@@ -8,7 +8,7 @@
   @include vp-1023 {
     padding-left: 50px;
     padding-right: 50px;
-    margin-top: 80px;
+    margin-top: 82px;
   }
 
   @include vp-767 {
@@ -36,9 +36,7 @@
   @include vp-767 {
     grid-template-columns: 1fr;
   }
-
 }
-
 
 .features__item h2 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -48,23 +46,23 @@
   line-height: 34px;
   color: $color-deep-sky-blue;
   margin: 0;
-  margin-bottom: 11px;
+  margin-bottom: 14px;
 
   @include vp-1023 {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   @include vp-767 {
     font-size: 20px;
     line-height: 28px;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
   }
 }
 
 .features__item p {
   font-family: "PT Mono", "Monaco", monospace;
   font-style: normal;
-  font-size:16px;
+  font-size: 16px;
   line-height: 22px;
   color: $color-black-pearl;
   margin: 0;
@@ -76,29 +74,18 @@
 }
 
 .features__icon {
+  display: block;
   fill: $color-deep-sky-blue;
-  margin-bottom: 18px;
-
-  &--mobile {
-    display: none;
-  }
+  margin-bottom: 22px;
 
   @include vp-1023 {
-    margin-bottom: 9px;
+    margin-bottom: 13px;
   }
 
   @include vp-767 {
     margin-bottom: 17px;
     width: 30px;
     height: 30px;
-
-    &--mobile {
-      display: block;
-    }
-
-    &--desktop {
-      display: none;
-    }
   }
 }
 
@@ -115,7 +102,8 @@
   @include hover {
     background-color: $color-deep-sky-blue;
 
-    h2, p {
+    h2,
+    p {
       color: $color-alice-blue-light;
     }
 
@@ -142,4 +130,3 @@
     }
   }
 }
-

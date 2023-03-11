@@ -3,11 +3,11 @@
   max-width: 1220px;
   margin: 0 auto;
   padding-top: 120px;
-  padding-bottom: 100px;
+  padding-bottom: 120px;
 
   @include vp-1023 {
-    padding-top: 79px;
-    padding-bottom: 80px;
+    padding-top: 78px;
+    padding-bottom: 78px;
     padding-left: 22px;
     padding-right: 26px;
   }
@@ -16,6 +16,7 @@
     padding-top: 33px;
     padding-left: 9px;
     padding-right: 9px;
+    padding-bottom: 80px;
   }
 }
 
@@ -49,6 +50,7 @@
   @include vp-767 {
     font-size: 28px;
     line-height: 39px;
+    margin-bottom: 10px;
   }
 }
 

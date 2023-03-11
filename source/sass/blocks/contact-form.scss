@@ -1,0 +1,129 @@
+.contact-form {
+  width: 500px;
+  background-color: $color-deep-sky-blue-form;
+  padding: 39px;
+  padding-bottom: 29px;
+}
+
+.contact-form h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+  text-align: left;
+  color: $color-default-white;
+  margin: 0;
+  margin-bottom: 3px;
+}
+
+.contact-form p {
+  font-family: "PT Mono", "Monaco", monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  color: $color-default-white;
+  margin: 0;
+  margin-bottom: 38px;
+  padding-right: 20px;
+}
+
+.contact-form__form-group{
+  margin: 0;
+  padding: 0;
+  border: none;
+  margin-bottom: 14px;
+}
+
+.contact-form__form-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.contact-form__form-item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 12px 15px;
+  font-family: "PT Mono", "Monaco", monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+  background-color: $color-black-pearl-form;
+  border-color: $color-transparent;
+  border-radius: 3px;
+
+  &::placeholder {
+    color: $color-default-white;
+  }
+
+  @include hover {
+    opacity: 0.8;
+  }
+
+  @include focus {
+    opacity: 0.8;
+  }
+}
+
+.contact-form textarea {
+  font-family: "PT Mono", "Monaco", monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  width: 100%;
+  padding: 24px 15px;
+  color: $color-default-white;
+  background-color: $color-black-pearl-form;
+  border-color: $color-transparent;
+  border-radius: 3px;
+
+  &::placeholder {
+    color: $color-default-white;
+  }
+
+  @include hover {
+    opacity: 0.8;
+  }
+
+  @include focus {
+    opacity: 0.8;
+  }
+}
+
+.contact-form__button {
+  width: 100%;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 13px;
+  margin-bottom: 18px;
+  color: $color-default-white;
+  background-color: $color-black-pearl-button;
+  border: 1px solid $color-transparent;
+  border-radius: 3px;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}
