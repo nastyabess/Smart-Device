@@ -74,7 +74,6 @@
 }
 
 .footer__menu {
-
   &:not(:last-child) {
     margin-right: 30px;
 
@@ -102,7 +101,7 @@
       left: 0;
     }
 
-    &.is-active>.accordion__button-footer::after {
+    &.is-active > .accordion__button-footer::after {
       transform: translate(-50%, -50%) rotate(180deg);
     }
   }

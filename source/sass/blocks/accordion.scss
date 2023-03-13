@@ -1,5 +1,4 @@
 .accordion {
-
   @include vp-767 {
     max-width: 767px;
     margin: 0;
@@ -10,10 +9,7 @@
     }
 
     &__button {
-
       cursor: pointer;
-
-
     }
 
     .accordion__wrapper {
@@ -32,14 +28,13 @@
 }
 
 .accordion__button-footer {
-
   @include vp-767 {
     width: 100%;
 
     &::before,
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       display: block;
       top: 50%;
       right: 20px;

@@ -11,4 +11,3 @@ const openButton = () => {
 export const onButtonClick = () => {
   button.addEventListener('click', openButton);
 };
-

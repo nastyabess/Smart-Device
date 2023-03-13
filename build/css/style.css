@@ -783,6 +783,15 @@ button,
   pointer-events: auto;
 }
 
+.modal__close-btn svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .custom-input,
 .custom-textarea {
   position: relative;
@@ -1806,7 +1815,9 @@ button,
 }
 
 .social__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 5px;
 }
 
@@ -1934,7 +1945,7 @@ button,
   padding-right: 45px;
   padding-top: 39px;
   padding-bottom: 35px;
-  border: 1px solid #EBEBEB;
+  border: 1px solid #ebebeb;
   border-left: 5px solid #00b2ff;
 }
 
@@ -2104,8 +2115,8 @@ button,
   height: 100%;
   top: 0;
   background: rgba(4, 24, 39, 0.5);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
 
@@ -2139,7 +2150,7 @@ button,
   height: 60px;
   background-color: #00b2ff;
   border-color: rgba(255, 255, 255, 0);
-  border-radius: 3px 0px 0px 0px;
+  border-radius: 3px 0 0 0;
   cursor: pointer;
 }
 
@@ -2279,6 +2290,10 @@ button,
   color: #ffffff;
 }
 
+.feedback__form input.focus-visible:focus {
+  opacity: 0.8;
+}
+
 .feedback__form-wrapper {
   margin-bottom: 27px;
 }
@@ -2295,7 +2310,6 @@ button,
   padding-left: 17px;
   padding-right: 17px;
   padding-bottom: 21px;
-  color: #ffffff;
   background-color: rgba(4, 20, 39, 0.15);
   border-color: rgba(255, 255, 255, 0);
   border-radius: 3px;
@@ -2319,6 +2333,10 @@ button,
 
 .feedback__form textarea::placeholder {
   color: #ffffff;
+}
+
+.feedback__form textarea.focus-visible:focus {
+  opacity: 0.8;
 }
 
 .feedback__form-container {
@@ -2951,7 +2969,7 @@ button,
     -ms-flex-align: center;
     align-items: center;
     margin-bottom: 0;
-    padding-bottom: 18px;
+    padding-bottom: 24px;
   }
 
   .social::after {
@@ -3151,22 +3169,22 @@ button,
   }
 
   .catalog__image img {
-    scale: 2.7;
+    scale: 1;
   }
 
   .catalog__image-1 img {
-    -o-object-position: left -55px bottom 6px;
-    object-position: left -55px bottom 6px;
+    -o-object-position: left bottom;
+    object-position: left bottom;
   }
 
   .catalog__image-2 img {
-    -o-object-position: left -54px bottom 79px;
-    object-position: left -54px bottom 79px;
+    -o-object-position: left bottom;
+    object-position: left bottom;
   }
 
   .catalog__image-3 img {
-    -o-object-position: right -38px bottom 43px;
-    object-position: right -38px bottom 43px;
+    -o-object-position: right bottom;
+    object-position: right bottom;
   }
 
   .catalog__button {

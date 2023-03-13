@@ -130,14 +130,12 @@
 }
 
 .feedback__form-item {
-
   &:not(:last-child) {
     margin-right: 30px;
 
     @include vp-767 {
       margin-bottom: 20px;
       margin-right: 0;
-
     }
   }
 }
@@ -170,6 +168,10 @@
   @include hover {
     opacity: 0.8;
   }
+
+  @include focus {
+    opacity: 0.8;
+  }
 }
 
 .feedback__form-wrapper {
@@ -192,7 +194,6 @@
   padding-left: 17px;
   padding-right: 17px;
   padding-bottom: 21px;
-  color: $color-default-white;
   background-color: $color-black-pearl-form;
   border-color: $color-transparent;
   border-radius: 3px;
@@ -212,6 +213,10 @@
   }
 
   @include hover {
+    opacity: 0.8;
+  }
+
+  @include focus {
     opacity: 0.8;
   }
 }

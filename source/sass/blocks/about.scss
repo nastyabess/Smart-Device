@@ -66,7 +66,6 @@
 
   &:not(:last-child) {
     margin-bottom: 19px;
-
   }
 
   @include vp-767 {
@@ -74,4 +73,3 @@
     line-height: 19px;
   }
 }
-
