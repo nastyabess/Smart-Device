@@ -1678,8 +1678,12 @@ button,
   opacity: 0.6;
 }
 
-.promo__button-text--abbreviated {
+.promo__button span:last-child {
   display: none;
+}
+
+.promo__button span:first-child {
+  display: block;
 }
 
 .footer {
@@ -2589,10 +2593,6 @@ button,
     margin-left: 45px;
   }
 
-  .promo__button.focus-visible:focus {
-    opacity: 0.8;
-  }
-
   .footer {
     padding-top: 50px;
     padding-bottom: 65px;
@@ -2812,12 +2812,6 @@ button,
   }
 }
 
-@media (max-width: 1023px) and (hover: hover) {
-  .promo__button:hover:not(.focus-visible) {
-    opacity: 0.8;
-  }
-}
-
 @media (max-width: 767px) {
   .container {
     padding: 0 16px;
@@ -2892,11 +2886,11 @@ button,
     margin-left: 0;
   }
 
-  .promo__button-text--abbreviated {
+  .promo__button span:last-child {
     display: block;
   }
 
-  .promo__button-text--full {
+  .promo__button span:first-child {
     display: none;
   }
 

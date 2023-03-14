@@ -137,10 +137,6 @@
 
   @include vp-1023 {
     margin-left: 45px;
-
-    @include hover-focus {
-      opacity: 0.8;
-    }
   }
 
   @include vp-767 {
@@ -159,18 +155,18 @@
   }
 }
 
-.promo__button-text {
-  &--abbreviated {
-    display: none;
-  }
+.promo__button span:last-child {
+  display: none;
 
   @include vp-767 {
-    &--abbreviated {
-      display: block;
-    }
+    display: block;
+  }
+}
 
-    &--full {
-      display: none;
-    }
+.promo__button span:first-child {
+  display: block;
+
+  @include vp-767 {
+    display: none;
   }
 }
