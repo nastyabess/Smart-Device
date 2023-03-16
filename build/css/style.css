@@ -389,7 +389,7 @@ template {
   font-weight: 400;
   font-family: "PT Mono";
   font-display: swap;
-  src: url("../../fonts/pt-mono_regular.woff2") format("woff2");
+  src: url("../fonts/pt-mono_regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -397,7 +397,7 @@ template {
   font-weight: 500;
   font-family: "Roboto";
   font-display: swap;
-  src: url("../../fonts/roboto-medium.woff2") format("woff2");
+  src: url("../fonts/roboto-medium.woff2") format("woff2");
 }
 
 @font-face {
@@ -405,7 +405,7 @@ template {
   font-weight: 400;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("../../fonts/roboto-condensed-regular.woff2") format("woff2");
+  src: url("../fonts/roboto-condensed-regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -413,7 +413,7 @@ template {
   font-weight: 700;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("../../fonts/roboto-condensed-bold.woff2") format("woff2");
+  src: url("../fonts/roboto-condensed-bold.woff2") format("woff2");
 }
 
 *,
@@ -687,7 +687,7 @@ button,
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -1556,6 +1556,16 @@ button,
   opacity: 0.8;
 }
 
+.contact-form__form-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 .contact-form__button {
   width: 100%;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -1719,12 +1729,22 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: auto;
+  margin-left: 130px;
   padding-right: 37px;
 }
 
 .footer__menu:not(:last-child) {
   margin-right: 30px;
+}
+
+.footer__menu-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(248, 253, 255, 0.7);
+  bottom: 0;
+  left: 0;
 }
 
 .footer__menu-title {
@@ -1767,15 +1787,15 @@ button,
 }
 
 .footer__menu-item {
-  width: 220px;
+  max-width: 220px;
 }
 
 .footer__menu-item:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
 .footer__menu-item a {
-  display: block;
+  display: inline-block;
   font-size: 16px;
   line-height: 22px;
   font-family: "PT Mono", "Monaco", monospace;
@@ -1833,6 +1853,10 @@ button,
   opacity: 0.6;
 }
 
+.contacts-footer {
+  margin-left: 94px;
+}
+
 .contacts-footer__address {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1841,6 +1865,16 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.contacts-footer__address-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.contacts-footer__address-item:not(:last-child) {
+  margin-bottom: 5px;
 }
 
 .contacts-footer__address p {
@@ -1852,10 +1886,11 @@ button,
   text-align: left;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 
-.contacts-footer__phone {
+.contacts-footer__address a {
+  display: inline-block;
   font-family: "PT Mono", "Monaco", monospace;
   font-size: 16px;
   line-height: 25px;
@@ -1866,15 +1901,11 @@ button,
   outline-offset: -2px;
 }
 
-.contacts-footer__phone:not(:last-child) {
-  margin-bottom: 5px;
-}
-
-.contacts-footer__phone.focus-visible:focus {
+.contacts-footer__address a.focus-visible:focus {
   opacity: 0.8;
 }
 
-.contacts-footer__phone.focus-visible:active {
+.contacts-footer__address a.focus-visible:active {
   opacity: 0.6;
 }
 
@@ -2299,7 +2330,7 @@ button,
 }
 
 .feedback__form-wrapper {
-  margin-bottom: 27px;
+  margin-bottom: 28px;
 }
 
 .feedback__form textarea {
@@ -2375,6 +2406,9 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
 }
 
 .feedback__form-button:disabled {
@@ -2384,6 +2418,12 @@ button,
 
 .feedback__form-button.focus-visible:focus {
   opacity: 0.8;
+}
+
+.control {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
 }
 
 .control__wrapper {
@@ -2434,9 +2474,9 @@ button,
 .control input:checked + .control__mark::before {
   content: "";
   position: absolute;
-  width: 7px;
+  width: 10px;
   height: 6px;
-  background-image: url("../../img/svg/checkbox.svg");
+  background-image: url("../img/svg/checkbox.svg");
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -2496,6 +2536,14 @@ button,
 
   .footer__container {
     padding: 0 32px;
+  }
+
+  .footer__wrapper {
+    margin-left: auto;
+  }
+
+  .contacts-footer {
+    margin-left: auto;
   }
 
   .features {
@@ -2634,7 +2682,7 @@ button,
   }
 
   .footer__menu-item:not(:last-child) {
-    margin-bottom: 7px;
+    margin-bottom: 5px;
   }
 
   .social {
@@ -2650,6 +2698,14 @@ button,
     align-items: center;
     margin-bottom: 33px;
     margin-right: 0;
+  }
+
+  .contacts-footer {
+    margin-left: 0;
+  }
+
+  .contacts-footer__address p {
+    margin-bottom: 8px;
   }
 
   .features {
@@ -2789,8 +2845,14 @@ button,
     margin-bottom: 23px;
   }
 
+  .feedback__form-item {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+
   .feedback__form input {
-    width: 320px;
+    width: 100%;
   }
 
   .feedback__form textarea {
@@ -2863,8 +2925,8 @@ button,
   }
 
   .promo__image img {
-    -o-object-position: left top;
-    object-position: left top;
+    -o-object-position: left -233px top 11px;
+    object-position: left -233px top 11px;
   }
 
   .promo h2 {
@@ -2923,24 +2985,16 @@ button,
 
   .footer__menu {
     position: relative;
-    padding-top: 18px;
-    padding-bottom: 18px;
-  }
-
-  .footer__menu::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: rgba(248, 253, 255, 0.7);
-    bottom: 0;
-    left: 0;
   }
 
   .footer__menu.is-active > .accordion__button-footer::after {
     -webkit-transform: translate(-50%, -50%) rotate(180deg);
     -ms-transform: translate(-50%, -50%) rotate(180deg);
     transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  .footer__menu.is-active {
+    padding-bottom: 15px;
   }
 
   .footer__menu-title {
@@ -2986,7 +3040,7 @@ button,
     line-height: 19px;
   }
 
-  .contacts-footer__phone {
+  .contacts-footer__address a {
     font-size: 14px;
   }
 
@@ -3011,6 +3065,8 @@ button,
 
   .accordion__button-footer {
     width: 100%;
+    padding-top: 22px;
+    padding-bottom: 21px;
   }
 
   .accordion__button-footer::before,
@@ -3077,10 +3133,10 @@ button,
   }
 
   .about__container {
-    padding-top: 33px;
+    padding-top: 48px;
     padding-left: 9px;
     padding-right: 9px;
-    padding-bottom: 80px;
+    padding-bottom: 79px;
   }
 
   .about__image {
@@ -3103,7 +3159,7 @@ button,
   }
 
   .about__accordion-content {
-    min-height: 268px;
+    min-height: 254px;
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 18px;
@@ -3153,7 +3209,7 @@ button,
   }
 
   .catalog__card {
-    padding-top: 30px;
+    padding-top: 28px;
     padding-left: 30px;
     padding-right: 105px;
   }
@@ -3163,22 +3219,22 @@ button,
   }
 
   .catalog__image img {
-    scale: 1;
+    scale: 2.7;
   }
 
   .catalog__image-1 img {
-    -o-object-position: left bottom;
-    object-position: left bottom;
+    -o-object-position: left -55px bottom 6px;
+    object-position: left -55px bottom 6px;
   }
 
   .catalog__image-2 img {
-    -o-object-position: left bottom;
-    object-position: left bottom;
+    -o-object-position: left -54px bottom 79px;
+    object-position: left -54px bottom 79px;
   }
 
   .catalog__image-3 img {
-    -o-object-position: right bottom;
-    object-position: right bottom;
+    -o-object-position: right -38px bottom 43px;
+    object-position: right -38px bottom 43px;
   }
 
   .catalog__button {
@@ -3218,10 +3274,6 @@ button,
   .feedback__form-item:not(:last-child) {
     margin-bottom: 20px;
     margin-right: 0;
-  }
-
-  .feedback__form input {
-    width: 100%;
   }
 
   .feedback__form-wrapper {
@@ -3310,12 +3362,6 @@ button,
   }
 }
 
-@media (max-width: 767px) and (max-width: 767px) {
-  .accordion .accordion__wrapper {
-    margin-top: 15px;
-  }
-}
-
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
@@ -3373,7 +3419,7 @@ button,
     opacity: 0.8;
   }
 
-  .contacts-footer__phone:hover:not(.focus-visible) {
+  .contacts-footer__address a:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 

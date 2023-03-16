@@ -130,6 +130,10 @@
 }
 
 .feedback__form-item {
+  @include vp-1023 {
+    flex-grow: 1;
+  }
+
   &:not(:last-child) {
     margin-right: 30px;
 
@@ -158,10 +162,6 @@
   }
 
   @include vp-1023 {
-    width: 320px;
-  }
-
-  @include vp-767 {
     width: 100%;
   }
 
@@ -175,7 +175,7 @@
 }
 
 .feedback__form-wrapper {
-  margin-bottom: 27px;
+  margin-bottom: 28px;
 
   @include vp-767 {
     margin-bottom: 23px;
@@ -253,6 +253,7 @@
   border-radius: 3px;
   cursor: pointer;
   user-select: none;
+  order: 1;
 
   &:disabled {
     opacity: 0.5;

@@ -11,12 +11,6 @@
     &__button {
       cursor: pointer;
     }
-
-    .accordion__wrapper {
-      @include vp-767 {
-        margin-top: 15px;
-      }
-    }
   }
 }
 
@@ -30,6 +24,8 @@
 .accordion__button-footer {
   @include vp-767 {
     width: 100%;
+    padding-top: 22px;
+    padding-bottom: 21px;
 
     &::before,
     &::after {

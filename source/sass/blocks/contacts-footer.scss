@@ -1,6 +1,30 @@
+.contacts-footer {
+  margin-left: 94px;
+
+  @include vp-1439 {
+    margin-left: auto;
+  }
+
+  @include vp-1023 {
+    margin-left: 0;
+  }
+}
+
 .contacts-footer__address {
   display: flex;
   flex-direction: column;
+}
+
+.contacts-footer__address-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.contacts-footer__address-item {
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
 }
 
 .contacts-footer__address p {
@@ -12,7 +36,11 @@
   text-align: left;
   color: $color-white-footer;
   margin: 0;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
+
+  @include vp-1023 {
+    margin-bottom: 8px;
+  }
 
   @include vp-767 {
     margin-bottom: 15px;
@@ -21,7 +49,8 @@
   }
 }
 
-.contacts-footer__phone {
+.contacts-footer__address a {
+  display: inline-block;
   font-family: "PT Mono", "Monaco", monospace;
   font-size: 16px;
   line-height: 25px;
@@ -30,10 +59,6 @@
   text-align: left;
   text-decoration: none;
   outline-offset: -2px;
-
-  &:not(:last-child) {
-    margin-bottom: 5px;
-  }
 
   @include vp-767 {
     font-size: 14px;

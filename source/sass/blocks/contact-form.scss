@@ -101,6 +101,11 @@
   }
 }
 
+.contact-form__form-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .contact-form__button {
   width: 100%;
   font-family: "Roboto Condensed", "Arial", sans-serif;

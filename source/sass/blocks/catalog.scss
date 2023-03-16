@@ -158,12 +158,11 @@
   }
 
   @include vp-767 {
-    padding-top: 30px;
+    padding-top: 28px;
     padding-left: 30px;
     padding-right: 105px;
   }
 }
-
 
 .catalog__image {
   position: absolute;
@@ -204,7 +203,7 @@
   }
 
   @include vp-767 {
-    scale: 1;
+    scale: 2.7;
   }
 }
 
@@ -216,7 +215,7 @@
   }
 
   @include vp-767 {
-    object-position: left bottom;
+    object-position: left -55px bottom 6px;
   }
 }
 
@@ -228,7 +227,7 @@
   }
 
   @include vp-767 {
-    object-position: left bottom;
+    object-position: left -54px bottom 79px;
   }
 }
 
@@ -240,7 +239,7 @@
   }
 
   @include vp-767 {
-    object-position: right bottom;
+    object-position: right -38px bottom 43px;
   }
 }
 

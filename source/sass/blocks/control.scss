@@ -1,3 +1,7 @@
+.control {
+  order: 2;
+}
+
 .control__wrapper {
   max-width: 260px;
   padding-left: 26px;
@@ -46,9 +50,9 @@
 .control input:checked + .control__mark::before {
   content: "";
   position: absolute;
-  width: 7px;
+  width: 10px;
   height: 6px;
-  background-image: url("../../img/svg/checkbox.svg");
+  background-image: url("../img/svg/checkbox.svg");
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
