@@ -1,6 +1,4 @@
 .contacts-footer {
-  margin-left: 94px;
-
   @include vp-1439 {
     margin-left: auto;
   }
@@ -36,7 +34,7 @@
   text-align: left;
   color: $color-white-footer;
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 
   @include vp-1023 {
     margin-bottom: 8px;

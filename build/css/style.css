@@ -687,7 +687,7 @@ button,
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(3, 16, 27, 0.7);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -1608,12 +1608,7 @@ button,
 }
 
 .promo__image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  display: block;
   position: absolute;
   top: 0;
   z-index: -1;
@@ -1708,9 +1703,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .footer__logo {
@@ -1731,6 +1723,7 @@ button,
   display: flex;
   margin-left: 130px;
   padding-right: 37px;
+  padding-top: 3px;
 }
 
 .footer__menu:not(:last-child) {
@@ -1758,7 +1751,7 @@ button,
   text-align: left;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 21px;
   padding: 0;
   background-color: #041827;
   border: none;
@@ -1776,22 +1769,24 @@ button,
   margin: 0;
   padding: 0;
   list-style-type: none;
-  display: -ms-grid;
-  display: grid;
-  grid-auto-flow: column;
-  -ms-grid-rows: (auto)[4];
-  grid-template-rows: repeat(4, auto);
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
   -webkit-column-gap: 30px;
   -moz-column-gap: 30px;
   column-gap: 30px;
 }
 
 .footer__menu-item {
-  max-width: 220px;
+  width: 220px;
 }
 
 .footer__menu-item:not(:last-child) {
-  margin-bottom: 7px;
+  margin-bottom: 6px;
+}
+
+.footer__menu-item:last-child {
+  margin-bottom: 46px;
 }
 
 .footer__menu-item a {
@@ -1853,10 +1848,6 @@ button,
   opacity: 0.6;
 }
 
-.contacts-footer {
-  margin-left: 94px;
-}
-
 .contacts-footer__address {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1886,7 +1877,7 @@ button,
   text-align: left;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .contacts-footer__address a {
@@ -1907,6 +1898,10 @@ button,
 
 .contacts-footer__address a.focus-visible:active {
   opacity: 0.6;
+}
+
+.accordion__wrapper--footer {
+  width: 470px;
 }
 
 [data-accordion=element].is-active > [data-accordion=content] {
@@ -2662,6 +2657,7 @@ button,
   .footer__wrapper {
     margin-left: 0;
     padding-right: 0;
+    padding-top: 0;
   }
 
   .footer__menu:not(:last-child) {
@@ -2706,6 +2702,10 @@ button,
 
   .contacts-footer__address p {
     margin-bottom: 8px;
+  }
+
+  .accordion__wrapper--footer {
+    width: 100%;
   }
 
   .features {
