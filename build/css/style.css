@@ -2991,7 +2991,7 @@ button,
     position: relative;
   }
 
-  .footer__menu.is-active > .accordion__button-footer::after {
+  .footer__menu.is-active .accordion__button-footer::after {
     -webkit-transform: translate(-50%, -50%) rotate(180deg);
     -ms-transform: translate(-50%, -50%) rotate(180deg);
     transform: translate(-50%, -50%) rotate(180deg);
