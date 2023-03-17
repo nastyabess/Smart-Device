@@ -2681,6 +2681,10 @@ button,
     margin-bottom: 5px;
   }
 
+  .footer__menu-item:last-child {
+    margin-bottom: 0;
+  }
+
   .social {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
