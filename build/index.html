@@ -212,7 +212,7 @@
               <h3>Остались вопросы? Задайте их&nbsp;нам!</h3>
               <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
               <div data-form-validate data-callback="base">
-                <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
+                <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post" novalidate>
                   <fieldset class="feedback__form-group">
                     <legend class="visually-hidden">Контактные данные</legend>
                     <ul class="feedback__form-list">
@@ -220,7 +220,7 @@
                         data-message-base="Поле обязательно к заполнению"
                         data-message-extra="Проверьте корректность заполнения поля" data-required>
                         <label>
-                          <input type="text" name="user-name" placeholder="Имя" required>
+                          <input type="text" name="user-name" placeholder="Имя" required aria-invalid="true">
                           <span class="visually-hidden">Имя.</span>
                         </label>
                       </li>
